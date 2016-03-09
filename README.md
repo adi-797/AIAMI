@@ -1,1 +1,7 @@
 # AIAMI
+
+This repository was produced for the Universidad Nacional de Tres de Febrero, Buenos Aires, Argentina. It is the result of a research study. The aim of this study was to develop a software capable of automatically identifying acoustical musical instruments through autonomous learning techniques. In order to achieve this, databases recommended by recognized institutes in the field of Music Information Retrieval (MIR), were evaluated. From these, a database for this specific investigation was created. Later on, the sound samples were characterized using a set of carefully chosen quantitative parameters. Each parameter was selected to describe a specific feature of the sound signal. Finally, the identification system was designed using the parameters as input and the performance of the system was evaluated using unknown sounds.
+
+The K-means and Support Vector Machines algorithms were both evaluated as options for identification techniques. The performance was measured using standard tools as accuracy, recall and F-Score. The public acoustical sound databases used are free and easily obtainable. The system was developed in Python using several open software packages such as Scikit-Learn and Essentia. The final system, after being trained, can automatically identify up to 21 different acoustic instruments and it can allow a quantitative evaluation of the specific information that each acoustic descriptor contributes towards algorithm identification.
+
+Keywords: Identification, MIR, Acoustical Instruments, Machine Learning, SVM, Python.
