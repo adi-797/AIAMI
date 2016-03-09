@@ -3,9 +3,8 @@ import os
 import numpy as np
 
 from FScore import F1Score
-from LoadDescriptors import load_descriptors
-from PreprocessingDescriptors import preprocess
-from stats import count_instruments
+from Identification.LoadDescriptors import load_descriptors
+from Identification.PreprocessingDescriptors import preprocess
 from svm import trainSVM
 
 __author__ = 'andres'

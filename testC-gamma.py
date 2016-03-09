@@ -3,12 +3,11 @@
 from sklearn import svm
 import numpy as np
 import matplotlib.pyplot as plt
-from mpl_toolkits.mplot3d import Axes3D
 
 from FScore import F1Score
-from LoadDescriptors import load_all_descriptors
-from PreprocessingDescriptors import preprocess
-from TrainCvTest import separate_databases
+from Identification.LoadDescriptors import load_all_descriptors
+from Identification.PreprocessingDescriptors import preprocess
+from Identification.TrainCvTest import separate_databases
 
 Descriptors = load_all_descriptors(reverbs=False)
 normalized_features, yClass, features_names = preprocess(Descriptors)

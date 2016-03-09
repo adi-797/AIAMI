@@ -1,7 +1,7 @@
 import numpy as np
 
-from LoadDescriptors import load_descriptors
-from PreprocessingDescriptors import preprocess
+from Identification.LoadDescriptors import load_descriptors
+from Identification.PreprocessingDescriptors import preprocess
 from testRepe import test_repe
 
 __author__ = 'andres'

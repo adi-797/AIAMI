@@ -1,6 +1,6 @@
 import numpy as np
 
-import TrainCvTest
+from Identification import TrainCvTest
 import svm
 import FScore
 

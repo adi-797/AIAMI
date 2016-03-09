@@ -1,4 +1,4 @@
-import DescribeSounds
+from Description import DescribeSounds
 
 #exceptionIRMAS = DescribeSounds.get("IRMAS-TrainingData",'.wav')
 exceptionIOWA = DescribeSounds.get("IOWAMIS", '.aif')

@@ -3,8 +3,10 @@
 import numpy as np
 import scipy.stats
 from pylab import imshow, show, figure
+
 import essentia.standard
-import config
+
+from utils import config
 
 
 def extract_all_descriptors(signal):

@@ -8,10 +8,8 @@ import os
 
 import essentia.standard
 
-import extracter
-import MeanUMA
-import JsonWriter
-import config
+from Description import extracter
+from utils import MeanCalculator, JsonWriter, config
 
 
 def get(input_dir, file_format):
@@ -30,7 +28,7 @@ def get(input_dir, file_format):
             extracted     = extracter.extract_all_descriptors(fDict)            # Le aplico los descriptores y obtengo un Pool de Essentia.
             descriptors   = extracted.keys()                             # Los nombres de los descriptores
                       
-            toWrite       = MeanUMA.calculate_mean(extracted)       #Calculo el promedio
+            toWrite       = MeanCalculator.calculate_mean(extracted)       #Calculo el promedio
             JsonWriter.write_json(path, fname, toWrite)  #Guardo los resultados en archivos .json
             print 'Done!'
           except Exception:

@@ -5,10 +5,11 @@ Luego, los guarda en un archivo Json para la siguiente etapa del proyecto
 """
 
 import os
+
 import essentia.standard
+
 import extracter
-import MeanUMA
-import JsonWriter
+from utils import MeanCalculator, JsonWriter
 
 
 def get(database_directory, format_extension):
@@ -24,7 +25,7 @@ def get(database_directory, format_extension):
                         extracted = extracter.extract_all_descriptors(loaded_sound)
                         # descriptors = extracted.keys()  # Los nombres de los descriptores
 
-                        averaged = MeanUMA.calculate_mean(extracted)
+                        averaged = MeanCalculator.calculate_mean(extracted)
                         JsonWriter.write_json(path, file_name, averaged)
                         print 'Done!'
                     except Exception:

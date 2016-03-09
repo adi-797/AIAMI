@@ -2,9 +2,9 @@
 
 import numpy as np
 import matplotlib.pyplot as plt
-from LoadDescriptors import load_all_descriptors
-from PreprocessingDescriptors import preprocess
 
+from Identification.LoadDescriptors import load_all_descriptors
+from Identification.PreprocessingDescriptors import preprocess
 from testRepe import test_repe_train_and_cv
 
 

@@ -1,6 +1,6 @@
-from LoadDescriptors import load_all_descriptors
-from PreprocessingDescriptors import preprocess
-from TrainCvTest import separate_databases
+from Identification.LoadDescriptors import load_all_descriptors
+from Identification.PreprocessingDescriptors import preprocess
+from Identification.TrainCvTest import separate_databases
 from FScore import F1Score
 
 Descriptors = load_all_descriptors()
