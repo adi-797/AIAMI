@@ -1,0 +1,32 @@
+count = {}
+nInst = 0
+for i in set(yClass):
+  number = len(np.where(i==yClass)[0])
+  count[i] = number
+  nInst = nInst+number
+  
+  
+means = {}
+for key in pearsons.keys():
+  for descriptor in pearsons[key]['feature'][1]:
+    if descriptor not in means:
+      means[descriptor] = np.array(pearsons[key]['feature'][1][descriptor][0])
+    else:
+      means[descriptor] = np.append(means[descriptor], pearsons[key]['feature'][1][descriptor][0])
+      
+      
+count = {}
+for key in means.keys():
+  count[key] = means[key].size
+  nInst = nInst+number
+
+mean = []
+for key in F1.keys():
+  mean.append(np.mean(F1[key]))
+
+no reverbs:  
+  np.mean(mean)
+Out[27]: 0.9058864481750265
+
+ np.mean(mean)
+Out[31]: 0.91942572204098005
