@@ -1,7 +1,7 @@
 from Identification.LoadDescriptors import load_all_descriptors
 from Identification.PreprocessingDescriptors import preprocess
 from Identification.TrainCvTest import separate_databases
-from FScore import F1Score
+from utils.FScore import F1Score
 
 Descriptors = load_all_descriptors()
 normalized_features, yClass, features_names = preprocess(Descriptors)

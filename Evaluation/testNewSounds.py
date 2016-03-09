@@ -2,7 +2,7 @@ import json
 import os
 import numpy as np
 
-from FScore import F1Score
+from utils.FScore import F1Score
 from Identification.LoadDescriptors import load_descriptors
 from Identification.PreprocessingDescriptors import preprocess
 from svm import trainSVM

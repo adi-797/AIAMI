@@ -2,7 +2,7 @@ import numpy as np
 
 from Identification.LoadDescriptors import load_descriptors
 from Identification.PreprocessingDescriptors import preprocess
-from testRepe import test_repe
+from Evaluation.testRepe import test_repe
 
 __author__ = 'andres'
 

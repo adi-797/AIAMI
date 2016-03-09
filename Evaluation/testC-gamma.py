@@ -4,7 +4,7 @@ from sklearn import svm
 import numpy as np
 import matplotlib.pyplot as plt
 
-from FScore import F1Score
+from utils.FScore import F1Score
 from Identification.LoadDescriptors import load_all_descriptors
 from Identification.PreprocessingDescriptors import preprocess
 from Identification.TrainCvTest import separate_databases

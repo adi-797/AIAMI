@@ -1,5 +1,6 @@
 import xlsxwriter
-from stats import run_stats_analysis
+
+from utils.stats import run_stats_analysis
 
 __author__ = 'andres'
 

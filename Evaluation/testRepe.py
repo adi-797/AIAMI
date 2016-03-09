@@ -2,7 +2,7 @@ import numpy as np
 
 from Identification import TrainCvTest
 import svm
-import FScore
+from utils import FScore
 
 
 def test_repe(times, normalized_features, yClass):

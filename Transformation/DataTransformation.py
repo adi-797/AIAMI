@@ -1,6 +1,8 @@
 import os
 import numpy as np
+
 from essentia.standard import AudioLoader, Resample, MonoWriter
+
 import LoadImpulse
 
 
