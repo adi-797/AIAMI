@@ -3,8 +3,8 @@ import os
 import essentia.standard
 
 from Description import extracter
-from utils import JsonWriter
-import Pearson
+from utils import JsonWriter, Pearson
+from Evaluation import Pearson
 
 inputDir = "UMAPiano-DB-Poly-1"
 descExt = '.wav'  # la extension que busco
