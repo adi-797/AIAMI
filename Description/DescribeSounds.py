@@ -1,5 +1,5 @@
 """ 
-Este script se encarga de realizar las descripciones de los sonidos.
+DescribeSounds realiza las descripciones de los sonidos.
 Los extrae para cada archivo y los escala entre si.
 Luego, los guarda en un archivo Json para la siguiente etapa del proyecto
 """
@@ -12,7 +12,7 @@ import extracter
 from utils import MeanCalculator, JsonWriter
 
 
-def get(database_directory, format_extension):
+def calculateDescriptorAndWriteToFile(database_directory, format_extension):
     exception = {}
     for path, directory_name, file_names in os.walk(database_directory):
         for file_name in file_names:
