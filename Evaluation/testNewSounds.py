@@ -3,9 +3,9 @@ import os
 import numpy as np
 
 from utils.FScore import F1Score
-from Identification.LoadDescriptors import load_descriptors
-from Identification.PreprocessingDescriptors import preprocess
-from svm import trainSVM
+from Identification.LoadDescriptors import loadDescriptors
+from Identification.PreprocessingDescriptors import preprocessDescriptors
+from Identification.svm import trainSVM
 
 __author__ = 'andres'
 
@@ -38,10 +38,10 @@ def load_description(input_dir, maximum='Inf', reverbs=True):
 
 def classify_new_sounds(folder_of_test_sounds, target_class):
     new_descriptors = {target_class: load_description(folder_of_test_sounds)}
-    new_normalized_features, new_y_class, new_features_names = preprocess(new_descriptors)
+    new_normalized_features, new_y_class, new_features_names = preprocessDescriptors(new_descriptors)
     new_y_class = np.array([target_class]*len(new_y_class))
-    descriptors = load_descriptors(maximum='Inf', reverbs=True)
-    normalized_features, yClass, features_names = preprocess(descriptors)
+    descriptors = loadDescriptors(maximum='Inf', reverbs=True)
+    normalized_features, yClass, features_names = preprocessDescriptors(descriptors)
     clf = trainSVM(normalized_features, yClass, call=True)
     F1 = F1Score(new_normalized_features, new_y_class, clf)
 

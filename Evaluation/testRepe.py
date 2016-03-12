@@ -1,7 +1,6 @@
 import numpy as np
 
-from Identification import TrainCvTest
-import svm
+from Identification import TrainCvTest, svm
 from utils import FScore
 
 
@@ -13,7 +12,7 @@ def test_repe(times, normalized_features, yClass):
 
     while iii < times:
         x_train, y_train, x_cv, y_cv, x_test, y_test = TrainCvTest. \
-            separate_databases(normalized_features, yClass)
+            separateDatabases(normalized_features, yClass)
         clf = svm.trainSVM(x_train, y_train, call=True)
         F1Test = FScore.F1Score(x_cv, y_cv, clf)
         mTest = np.array([])
@@ -42,7 +41,7 @@ def test_repe_train_and_cv(times, features, classes):
 
     while iii < times:
         x_train, y_train, x_cv, y_cv, x_test, y_test = TrainCvTest. \
-            separate_databases(features, classes)
+            separateDatabases(features, classes)
         clf = svm.trainSVM(x_train, y_train, call=True)
 
         F1Train = FScore.F1Score(x_train, y_train, clf)
@@ -82,7 +81,7 @@ def test_repe_test(times, features, classes):
 
     while iii < times:
         x_train, y_train, x_cv, y_cv, x_test, y_test = TrainCvTest. \
-            separate_databases(features, classes)
+            separateDatabases(features, classes)
         clf = svm.trainSVM(x_train, y_train, call=True)
 
         F1Test = FScore.F1Score(x_test, y_test, clf)

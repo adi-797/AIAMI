@@ -3,8 +3,8 @@ import matplotlib.pyplot as plt
 
 from Identification import LoadDescriptors, PreprocessingDescriptors
 
-Descriptors = LoadDescriptors.load_all_descriptors()
-normalized, yClass, features = PreprocessingDescriptors.preprocess(Descriptors)
+Descriptors = LoadDescriptors.loadAllDescriptors()
+normalized, yClass, features = PreprocessingDescriptors.preprocessDescriptors(Descriptors)
 del (Descriptors)
 
 x = normalized[:, 18]

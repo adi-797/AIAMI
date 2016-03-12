@@ -9,7 +9,7 @@ import essentia.standard
 from utils import config
 
 
-def extract_all_descriptors(signal):
+def extractAllDescriptors(signal):
     """
     Extracts the descriptors expected for the analysis of a given audio file.
     """

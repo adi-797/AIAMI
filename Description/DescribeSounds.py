@@ -22,7 +22,7 @@ def calculateDescriptorAndWriteToFile(database_directory, format_extension):
                     try:  # uso un try..except..finally para asegurarme de _siempre_ terminar el proceso
                         print file_name
                         loaded_sound = essentia.standard.MonoLoader(downmix="left", filename=path + "/" + file_name)()
-                        extracted = extracter.extract_all_descriptors(loaded_sound)
+                        extracted = extracter.extractAllDescriptors(loaded_sound)
                         # descriptors = extracted.keys()  # Los nombres de los descriptores
 
                         averaged = MeanCalculator.calculate_mean(extracted)

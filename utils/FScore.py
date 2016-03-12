@@ -4,7 +4,7 @@ En este script se calcula los F1 Score para cada instrumento individualmente
 
 import numpy as np
 
-import svm
+from Identification import svm
 
 
 def intersection(first, second):

@@ -5,14 +5,14 @@ import numpy as np
 import matplotlib.pyplot as plt
 
 from utils.FScore import F1Score
-from Identification.LoadDescriptors import load_all_descriptors
-from Identification.PreprocessingDescriptors import preprocess
-from Identification.TrainCvTest import separate_databases
+from Identification.LoadDescriptors import loadAllDescriptors
+from Identification.PreprocessingDescriptors import preprocessDescriptors
+from Identification.TrainCvTest import separateDatabases
 
-Descriptors = load_all_descriptors(reverbs=True)
-normalized_features, yClass, features_names = preprocess(Descriptors)
+Descriptors = loadAllDescriptors(reverbs=True)
+normalized_features, yClass, features_names = preprocessDescriptors(Descriptors)
 del Descriptors  # Ya no lo voy a utilizar
-normalizedTrain, yTrain, normalizedCV, yCV, normalizedTest, yTest = separate_databases(normalized_features, yClass)
+normalizedTrain, yTrain, normalizedCV, yCV, normalizedTest, yTest = separateDatabases(normalized_features, yClass)
 
 
 def test_data_size(training_features, training_classes, test_features, test_classes):

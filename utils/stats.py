@@ -1,7 +1,7 @@
 import numpy as np
 
-from Identification.LoadDescriptors import load_descriptors
-from Identification.PreprocessingDescriptors import preprocess
+from Identification.LoadDescriptors import loadDescriptors
+from Identification.PreprocessingDescriptors import preprocessDescriptors
 from Evaluation.testRepe import test_repe
 
 __author__ = 'andres'
@@ -30,8 +30,8 @@ def std_per_instrument(dictionary_f1):
 
 
 def run_stats_analysis(maximum='Inf', reverbs=True):
-    Descriptors = load_descriptors(maximum, reverbs)
-    normalized_features, yClass, features_names = preprocess(Descriptors)
+    Descriptors = loadDescriptors(maximum, reverbs)
+    normalized_features, yClass, features_names = preprocessDescriptors(Descriptors)
     every_f1_test, mMean, mVar = test_repe(100, normalized_features, yClass)
     instrument_count = count_instruments(yClass)
     mean = mean_per_instrument(every_f1_test)

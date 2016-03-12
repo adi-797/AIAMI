@@ -3,8 +3,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
 
-from Identification.LoadDescriptors import load_all_descriptors
-from Identification.PreprocessingDescriptors import preprocess
+from Identification.LoadDescriptors import loadAllDescriptors
+from Identification.PreprocessingDescriptors import preprocessDescriptors
 from testRepe import test_repe_train_and_cv
 
 
@@ -20,8 +20,8 @@ def test_features(features_vector, classes_vector):
 
     return f1_cv_per_feature, f1_train_per_feature, features
 
-Descriptors = load_all_descriptors(reverbs=True)
-normalized_features, yClass, features_names = preprocess(Descriptors)
+Descriptors = loadAllDescriptors(reverbs=True)
+normalized_features, yClass, features_names = preprocessDescriptors(Descriptors)
 del Descriptors  # Ya no lo voy a utilizar
 f1_cv, f1_train, features = test_features(normalized_features, yClass)
 

@@ -25,7 +25,7 @@ def get(input_dir, file_format):
           try:            # uso un try..except..finally para asegurarme de _siempre_ terminar el proceso
             print fname
             fDict         = essentia.standard.MonoLoader(downmix = "left", filename = path+"/"+ fname)() # lo cargo
-            extracted     = extracter.extract_all_descriptors(fDict)            # Le aplico los descriptores y obtengo un Pool de Essentia.
+            extracted     = extracter.extractAllDescriptors(fDict)            # Le aplico los descriptores y obtengo un Pool de Essentia.
             descriptors   = extracted.keys()                             # Los nombres de los descriptores
                       
             toWrite       = MeanCalculator.calculate_mean(extracted)       #Calculo el promedio

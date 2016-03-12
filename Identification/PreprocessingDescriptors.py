@@ -5,7 +5,7 @@
 import numpy as np
 
 
-def preprocess(descriptors):
+def preprocessDescriptors(descriptors):
     temp = []
     y = []  # vector con los nombres de los archivos en los mismos índices que su vector normalizado de descriptores
     y_class = []  # y un vector con las clases.

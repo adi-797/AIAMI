@@ -4,7 +4,7 @@
 import numpy as np
 
 
-def separate_databases(features_database, class_database):
+def separateDatabases(features_database, class_database):
     features_train = []
     class_train = []
     features_cross_validation = []

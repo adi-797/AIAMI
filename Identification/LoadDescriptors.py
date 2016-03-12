@@ -87,7 +87,7 @@ def loadIOWA(input_directory, reverbs=True, maximum='Inf'):
     return dataDetails
 
 
-def load_descriptors(maximum, reverbs=True):
+def loadDescriptors(maximum, reverbs=True):
     descritors = {}
     descriptors = loadIOWA("IOWAMIS", reverbs, maximum)
     descriptors['UMA'] = loadUMA("UMAPiano-DB-Poly-1", reverbs, maximum)
@@ -95,7 +95,7 @@ def load_descriptors(maximum, reverbs=True):
     return descriptors
 
 
-def load_all_descriptors(reverbs=True):
+def loadAllDescriptors(reverbs=True):
     descriptors = {}
     descriptors = loadIOWA("IOWAMIS", reverbs)
     descriptors['UMA'] = loadUMA("UMAPiano-DB-Poly-1", reverbs)

@@ -19,7 +19,7 @@ for path, dname, fnames in os.walk(
             if new_pid == 0:  # Si new_pid == 0, entramos en el forked process.
                 try:  # uso un try..except..finally para asegurarme de _siempre_ terminar el proceso
                     fDict = essentia.standard.MonoLoader(downmix="left", filename=path + "/" + fname)()  # lo cargo
-                    extracted = extracter.extract_all_descriptors(
+                    extracted = extracter.extractAllDescriptors(
                         fDict)  # le aplico los descriptores, aca me vuelve un Pool de Essentia
                     correlation = Pearson.correlate(extracted)
                     meanCorr[fname] = correlation
