@@ -1,4 +1,4 @@
-# AIAMI
+# Automatic Identification of Acoustical Musical Instruments
 
 This repository was produced for the Universidad Nacional de Tres de Febrero, Buenos Aires, Argentina. It is the result of a research study. The aim of this study was to develop a software capable of automatically identifying acoustical musical instruments through autonomous learning techniques. In order to achieve this, databases recommended by recognized institutes in the field of Music Information Retrieval (MIR), were evaluated. From these, a database for this specific investigation was created. Later on, the sound samples were characterized using a set of carefully chosen quantitative parameters. Each parameter was selected to describe a specific feature of the sound signal. Finally, the identification system was designed using the parameters as input and the performance of the system was evaluated using unknown sounds.
 
